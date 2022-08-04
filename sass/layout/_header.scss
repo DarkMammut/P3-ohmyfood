@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    height: 65px;
+    box-shadow: 0px 0px 11px 2px rgb(0 0 0 /20%);
+    @include desktop {
+        box-shadow: none;
+        justify-content: inherit;
+        font-size: 170%;
+        width: auto;
+        padding-left: 100px;
+        padding-top: 20px;
+    }
+    & a {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        font-size: 130%;
+        &:visited {
+            color: black;
+        }
+    }
+
+}

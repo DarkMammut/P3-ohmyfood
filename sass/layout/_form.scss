@@ -1,0 +1,45 @@
+#location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: $color-gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include desktop {
+        position: absolute;
+        background-color: transparent;
+        top: 30px;
+        right: 91px;
+        width: auto;
+        & i {
+            @include desktop {
+                border-left: solid 1px $color-accent;
+                border-top: solid 1px $color-accent;
+                border-bottom: solid 1px $color-accent;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 6px;
+            }
+        }
+    }
+}
+
+input {
+    background-color: transparent;
+    border:none;
+    text-align: center;
+    font-weight: bold;
+    font-size:90%;
+    height: 30px;
+    width: 140px;
+    @include desktop {
+        width: 200px;
+        border-right: solid 1px $color-accent;
+        border-top: solid 1px $color-accent;
+        border-bottom: solid 1px $color-accent;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 110%;
+    }
+}

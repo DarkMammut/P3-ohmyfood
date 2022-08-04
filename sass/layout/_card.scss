@@ -1,0 +1,65 @@
+.card {
+    display:flex;
+    flex-direction: column;
+    height: auto;
+    position:relative;
+    width:100%;
+    border-radius: 15px;
+    background-color: $color-white;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 11px 2px rgb(0 0 0 /20%);
+    @include desktop {
+        width: 47%;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+    @include tablet {
+        width: 47%;
+    }
+    &__picture {
+        height: $mobile-picture-height;
+        overflow:hidden;
+        height: 130px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        & img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+    &__badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $color-accent;
+        color: $color-green;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 80%;
+        font-weight: bold;
+        border-radius: 2px;
+    }
+    &__caption {
+        Position: relative;
+        display: flex;
+        flex-direction: initial;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 30px;
+        padding-left: 15px;
+        &__heart {
+            @include clickable_heart ($top: 25px, $right: 30px);
+            &:hover i:nth-child(2) {
+                opacity: 0;
+            }
+            &:hover i:nth-child(1) {
+                animation: pulse 500ms ease forwards;
+            }
+
+        }
+    }
+}

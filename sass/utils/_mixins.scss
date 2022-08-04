@@ -1,0 +1,46 @@
+@mixin mobile_layout ($color) {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    background-color: $color;
+}
+
+@mixin desktop_layout ($color) {
+    display:flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+    background-color: $color;
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, desktop)) and (min-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+@mixin clickable_heart ($top, $right) {
+    height: 100%;
+     i {
+        position: absolute;
+        top: $top;
+        right: $right;
+        font-size: 150%;
+        &:nth-child(1) {
+            color:$color-primary;
+            opacity: 0;
+            background-color: transparent;
+        }
+        &:nth-child(2) {
+            color:$color-black;
+            background-color: transparent;
+
+        }
+    }
+}

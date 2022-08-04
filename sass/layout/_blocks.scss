@@ -1,0 +1,46 @@
+#top {
+    @include mobile_layout ($color-light-gray);
+    align-items: center;
+    @include desktop {
+        @include desktop-layout($color-white);
+        width:100%;
+        margin-bottom: 40px;
+    }
+    @include tablet {
+        @include desktop-layout($color-light-gray);
+        width:100%;
+    }
+}
+
+#mid {
+    @include mobile_layout (transparent);
+    margin-bottom: 40px;
+    @include desktop {
+        width: 30%;
+        background-color: $color-light-gray;
+        border-radius: 30px;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    @include tablet {
+        margin-bottom: 0;
+    }
+    & ul {
+        @include desktop {
+            padding-top: 20px;
+        }
+        @include tablet {
+            @include desktop-layout(transparent);
+        }
+    }
+}
+
+#bottom {
+    @include mobile_layout (transparent);
+    @include desktop {
+        @include desktop-layout(transparent);
+        width: 65%;
+        margin: 0;
+    }
+}
+

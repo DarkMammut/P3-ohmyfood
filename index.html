@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ohmyfood</title>
+
+    <link rel="stylesheet" href="./public/css/main.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/035157c774.js" crossorigin="anonymous"></script>
+
+    <!--Shrikhand & Roboto police google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    
+</head>
+
+<header>
+    <h1>ohmyfood</h1>
+</header>
+
+<main>
+    <div id="location">
+        <i class="fa-solid fa-location-dot"></i>
+        <form method="post" action="traitement.php">
+            <input type="search" value="Paris, Belleville" />
+        </form>
+    </div>
+
+    <section id="top">
+        <div class="titles">
+            <h2>Réservez le menu qui vous convient</h2>
+            <h3>Découvrez des restaurants d'exception, séléctionnés par nos soins.</h3>
+        </div>
+        <button onclick="" class="btn">
+            <span>Explorer nos restaurants</span>
+        </button>
+    </section>
+ 
+    <section id="mid">
+        <h2>Fonctionnement</h2>
+        <ul>
+            <li class="box">
+                <a class="box__button" href="#">
+                    <div class="box__button__number">1</div>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>Choisissez un restaurant</span>
+                </a>
+
+            </li>
+            <li class="box">
+                <a class="box__button" href="#">
+                    <div class="box__button__number">2</div>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <span>Composez votre menu</span>
+                </a>
+            </li>
+            <li class="box">
+                <a class="box__button" href="#">
+                    <div class="box__button__number">3</div>
+                    <i class="fa-solid fa-store"></i>
+                    <span>Dégustez au restaurant</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section id="bottom">
+        <h2>Restaurants</h2>
+        <div class="container">
+            <figure class="card">
+                <a href="menu1.html">
+                    <div class=card__picture>
+                        <img src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du gout"/>
+                    </div>
+                </a>
+                <div class="card__badge">Nouveau</div>
+                <figcaption class="card__caption">
+                    <div class="card__caption__textarea">
+                        <h3 class="card__caption__textarea__name">La palette du goût</h3>
+                        <span class="card__caption__textarea__adress">Ménilmontant</span>
+                    </div>
+                    <a href="#" class="card__caption__heart">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </figcaption>
+            </figure>
+            <figure class="card">
+                <a href="menu2.html">
+                    <div class=card__picture>
+                        <img src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantee"/>
+                    </div>
+                </a>
+                <div class="card__badge">Nouveau</div>
+                <figcaption class="card__caption">
+                    <div class="card__caption__textarea">
+                        <h3 class="card__caption__textarea__name">La note enchantée</h3>
+                        <span class="card__caption__textarea__adress">Charonne</span>
+                    </div>
+                    <a href="#" class="card__caption__heart">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </figcaption>
+            </figure>
+            <figure class="card">
+                <a href="menu3.html">
+                    <div class=card__picture>
+                        <img src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="a la francaise"/>
+                    </div>
+                </a>    
+                <div class="card__badge">Nouveau</div>
+                <figcaption class="card__caption">
+                    <div class="card__caption__textarea">
+                        <h3 class="card__caption__textarea__name">À la française</h3>
+                        <span class="card__caption__textarea__adress">Cité Rouge</span>
+                    </div>
+                    <a href="#" class="card__caption__heart">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </figcaption>
+            </figure>            
+            <figure class="card">
+                <a href="menu4.html">
+                    <div class=card__picture>
+                        <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le delice des sens"/>
+                    </div>
+                </a>
+                <div class="card__badge">Nouveau</div>
+                <figcaption class="card__caption">
+                    <div class="card__caption__textarea">
+                        <h3 class="card__caption__textarea__name">Le délice des sens</h3>
+                        <span class="card__caption__textarea__adress">Folie-Méricourt</span>
+                    </div>
+                    <a href="#" class="card__caption__heart">
+                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <h4>ohmyfood</h4>
+    <ul>
+        <li>
+            <i class="fa-solid fa-utensils"></i>
+            <a href="#">Proposer un restaurant</a>
+        </li>
+        <li>
+            <i class="fa-solid fa-handshake-angle"></i>
+            <a href="#">Devenir partenaire</a>
+        </li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</footer>
+
+<div id=frame>
+    <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+

@@ -1,0 +1,151 @@
+.menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &__picture {
+        width: 100%;
+        height: 200px;
+        @include desktop {
+            height: 400px;
+        }
+        @include tablet {
+            height: 300px;
+        }
+        & img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            @include desktop {
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+            }
+        }
+    }
+    &__container {
+        @include mobile-layout($color:$color-light-gray);
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        @include desktop {
+            padding-bottom: 40px;
+        }
+        & ul {
+            margin-bottom: 40px;
+            @include desktop {
+                @include desktop-layout (transparent);
+                margin-bottom: 10px;
+            }
+            @include tablet {
+                @include desktop-layout (transparent);
+            }
+        }
+        &__header {
+            position: relative;
+
+            &__heart {
+                @include clickable_heart ($top: 30px, $right: 30px);
+                &:hover i:nth-child(2) {
+                    opacity: 0;
+                }
+                &:hover i:nth-child(1) {
+                    animation: pulse 500ms ease forwards;
+                }
+
+            }
+        }
+        &__title {
+            width: 45px;
+            border-bottom: 3px solid $color-accent;
+            margin-bottom: 15px;
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        &__card {
+            display: flex;
+            flex-direction: initial;
+            overflow: hidden;
+            width: 90%;
+            padding-right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            color:$color-black;
+            background-color: $color-white;
+            box-shadow: 0px 0px 11px 2px rgb(0 0 0 /20%);
+            cursor: pointer;
+            @include desktop {
+                width: 30%;
+            }
+            @include tablet {
+                width: 45%;
+            }
+            &:hover .menu__container__card__textarea {
+                animation: left-slide 700ms ease forwards;
+            }
+            &:hover div {
+                transform: translatex(0);
+            }
+            &:hover i {
+                transform: rotate(360deg);
+            }
+            &__textarea {
+                flex: 1;
+                line-height: 1.5;
+                margin-right: -20%;
+                padding-left: 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                overflow: hidden;
+                animation: right-slide 700ms ease backwards;
+                & h5, span {
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 100%;
+                }
+            }
+            &__price {
+                display: flex;
+                align-items: flex-end;
+                font-weight: bold;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                padding-right: 15px;
+                transform: translatex(120%);
+                transition-duration: 700ms;
+            }
+            &__validation {
+                display: flex;
+                width: 70px !important;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-accent;
+                transform: translatex(100%);
+                transition-duration: 700ms;
+                & i {
+                    color: $color-white;
+                    background-color: transparent;
+                    font-size: 150%;
+                    transform: rotate(0deg);
+                    transition-duration: 700ms;
+                }
+            }
+            @for $i from 1 through 4 {
+                &:nth-child(#{$i}){
+                  animation-name: slides-in;
+                  animation-duration: 1.5s;
+                  animation-delay: 3s + $i * 200ms;
+                  animation-fill-mode: forwards;
+                  animation-timing-function: ease;
+                }
+              }
+        }
+        &__btn {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

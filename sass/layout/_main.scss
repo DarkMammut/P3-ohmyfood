@@ -1,0 +1,6 @@
+main {
+    @include desktop{
+        @include desktop-layout (transparent);
+        justify-content: space-between;
+    }
+}
